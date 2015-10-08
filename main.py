@@ -4,21 +4,29 @@
 import webbrowser
 import pyautogui
 import time
+# from selenium import selenium
+import subprocess
 
-print pyautogui.position() # 获取当前鼠标的坐标
 
+# print pyautogui.position() # 获取当前鼠标的坐标
 
-webbrowser.open_new_tab("https://www.baidu.com/")
+# webbrowser.open_new_tab("https://www.baidu.com/")
+def browse():
+    child = subprocess.Popen("/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome http://tieba.baidu.com/", shell=True)
+# time.sleep(0.5)
+# pyautogui.moveTo(1023, 137) # 点进 贴吧
 
-time.sleep(0.5)
-pyautogui.moveTo(1023, 137) # 点进 贴吧
+# pyautogui.click()
+    time.sleep(2)
+    pyautogui.moveTo(303, 612)  # 一键签到 。上方可能会有新内容弹出，在加载完成前点击就可以了
+    pyautogui.click()
+    time.sleep(1)
+    pyautogui.moveTo(664, 360)  # 进行签到
+    pyautogui.click()
+    # time.sleep(1)
+    # pyautogui.moveTo(946, 239) # 关闭签到弹窗
+    # pyautogui.click()
+    # time.sleep(1)
+    child.kill()
 
-pyautogui.click()
-time.sleep(1)
-pyautogui.moveTo(309, 617)  # 一键签到 。上方可能会有新内容弹出，在加载完成前点击就可以了
-pyautogui.click()
-time.sleep(0.5)
-pyautogui.moveTo(660, 405)  # 进行签到
-pyautogui.click()
-time.sleep(0.5)
-pyautogui.moveTo(943, 239) # 关闭签到弹窗
+browse()
