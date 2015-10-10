@@ -1,13 +1,15 @@
 ## 百度贴吧自动一键签到
 
 平台：
-Python 2.7.9
-OS 10.10.5
+
+- Python 2.7.9
+- OS 10.10.5
 
 需要安装的 Python 库：
-pyautogui
-pyobjc-core
-pyobjc
+
+- pyautogui
+- pyobjc-core
+- pyobjc
 
 使用方法：
 
